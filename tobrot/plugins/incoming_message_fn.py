@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     user_command = message.command[0]
     g_id = message.from_user.id
     credit = await message.reply_text(
-        f"🧲𝙇𝙚𝙚𝙘𝙝𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪<a href='tg://user?id={g_id}'>⚡</a>", parse_mode="html"
+        f"𝙇𝙚𝙚𝙘𝙝𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪<a href='tg://user?id={g_id}'>⚡</a>", parse_mode="html"
     )
     i_m_sefg = await message.reply_text("processing...", quote=True)
     # get link from the incoming message
@@ -67,10 +67,10 @@ async def incoming_message_f(client, message):
         LOGGER.info(dl_url)
         cf_name = None
     else:
-        await i_m_sefg.edit("👺𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙👺")
+        await i_m_sefg.edit("𝙉𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙨𝙤𝙪𝙧𝙘𝙚 𝙥𝙧𝙤𝙫𝙞𝙙𝙚𝙙")
         return
     if dl_url is not None:
-        await i_m_sefg.edit_text("⚡𝙚𝙭𝙩𝙧𝙖𝙘𝙩𝙞𝙣𝙜 𝙡𝙞𝙣𝙠𝙨🧲")
+        await i_m_sefg.edit_text("⚡𝙚𝙭𝙩𝙧𝙖𝙘𝙩𝙞𝙣𝙜 𝙡𝙞𝙣𝙠𝙨")
         # start the aria2c daemon
         aria_i_p = await aria_start()
         # LOGGER.info(aria_i_p)
@@ -82,7 +82,7 @@ async def incoming_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("⏬𝙏𝙍𝙔𝙄𝙉𝙂 𝙏𝙊 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿🧲")
+        await i_m_sefg.edit_text("𝙏𝙍𝙔𝙄𝙉𝙂 𝙏𝙊 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿")
         # try to download the "link"
         is_zip = False
         is_cloud = False
